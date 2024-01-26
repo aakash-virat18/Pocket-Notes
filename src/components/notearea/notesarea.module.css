@@ -43,7 +43,7 @@
 }
 
 .groupicon {
-  @apply h-11 w-11 rounded-full flex items-center justify-center text-white text-xs;
+  @apply h-11 w-11 rounded-full flex items-center justify-center text-white;
 }
 
 .notessection {
