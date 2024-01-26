@@ -1,0 +1,36 @@
+.sidebar {
+  @apply bg-white h-screen overflow-scroll xs:w-1/5 w-screen font-roboto flex flex-col relative;
+}
+
+.sidebarHidden {
+  @apply bg-white h-screen overflow-scroll xs:w-1/5 w-screen font-roboto xs:flex hidden flex-col relative;
+}
+
+.sidebar h3,
+.sidebarHidden h3 {
+  @apply xs:text-[30px] text-[25px] font-medium text-center mt-4;
+}
+
+.add {
+  @apply text-white text-4xl;
+}
+
+.addButton {
+  @apply bg-[#16008B] h-14 w-14 flex items-center justify-center rounded-full absolute bottom-6 xs:right-[6%] right-5 cursor-pointer;
+}
+
+.groups {
+  @apply overflow-scroll mt-8 flex flex-col gap-5;
+}
+
+.groupicon {
+  @apply h-12 w-12 rounded-full flex items-center justify-center text-white text-xs ml-4;
+}
+
+.groupname {
+  @apply flex items-center gap-4 cursor-pointer hover:bg-[#EEE] h-16;
+}
+
+.groupname p {
+  @apply text-lg;
+}

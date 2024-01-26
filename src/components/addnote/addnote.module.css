@@ -1,0 +1,36 @@
+.overlay {
+  @apply fixed top-0 left-0 right-0 bottom-0 bg-[rgba(0,0,0,0.7)] flex justify-center items-center;
+}
+
+.addnote {
+  @apply bg-white rounded xs:w-[740px] w-[90%] xs:h-[310px] h-[250px] xs:pl-10 pl-6 flex flex-col gap-6 relative;
+}
+
+.addnote h4 {
+  @apply xs:text-[25px] text-xl font-medium mt-8;
+}
+
+.nameInput {
+  @apply flex xs:gap-8 gap-2;
+}
+
+.nameInput label,
+.colorsField label {
+  @apply xs:text-[23px] text-[18px] font-medium;
+}
+
+.nameInput input {
+  @apply border-[#CCCCCC] border xs:w-80 w-48 xs:rounded-[14px] rounded-[10px] outline-none px-4;
+}
+
+.colorsField {
+  @apply flex items-center xs:gap-6 gap-2;
+}
+
+.colors {
+  @apply flex gap-2;
+}
+
+.createButton {
+  @apply bg-[#001F8B] text-white font-roboto font-normal h-8 w-32 rounded-[10px] absolute bottom-4 xs:right-6 right-1/2 sm:translate-x-0 translate-x-1/2;
+}

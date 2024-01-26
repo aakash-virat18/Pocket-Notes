@@ -1,0 +1,63 @@
+.notesarea {
+  @apply h-screen bg-[#DAE5F5] xs:w-[80%] w-full;
+}
+
+.upper {
+  @apply w-full h-[8%] bg-[#001F8B] flex items-center gap-2;
+}
+
+.lower {
+  @apply w-full h-[25%] bg-[#001F8B] fixed bottom-0;
+}
+
+.textarea {
+  @apply xs:w-[77%] w-[96%] h-[85%] resize-none border-none outline-none absolute left-[1.5%] top-[7.5%] p-2 pr-8;
+}
+
+.send {
+  @apply z-30 border-none fixed bottom-6 xs:right-8 right-[23px];
+}
+
+.send img {
+  @apply h-6 w-6;
+}
+
+.home {
+  @apply w-[75%] hidden h-full xs:flex items-center justify-center flex-col;
+}
+
+.home h1 {
+  @apply text-black text-3xl font-semibold;
+}
+
+.home p {
+  @apply font-medium text-sm mt-2;
+}
+
+.groupname {
+  @apply flex gap-3 ml-2;
+}
+
+.groupname p {
+  @apply text-white flex items-center text-lg;
+}
+
+.groupicon {
+  @apply h-11 w-11 rounded-full flex items-center justify-center text-white text-xs;
+}
+
+.notessection {
+  @apply p-2 h-[65%] overflow-scroll flex flex-col gap-2 mb-60;
+}
+
+.textbox {
+  @apply w-[100%] bg-white shadow-md rounded-[5px] py-4 px-2;
+}
+
+.back {
+  @apply ml-3 xs:hidden block cursor-pointer;
+}
+
+.textbox div {
+  @apply text-end mt-4 mr-4;
+}
