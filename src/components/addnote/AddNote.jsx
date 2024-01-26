@@ -37,8 +37,8 @@ const AddNote = () => {
   });
 
   return (
-    <div className={styles.overlay}>
-      <div className={styles.addnote}>
+    <div className={styles.overlay} onClick={handleModalOpen}>
+      <div className={styles.addnote} onClick={(e) => e.stopPropagation()}>
         <h4>Create New group</h4>
         <div className={styles.nameInput}>
           <label htmlFor="name">Group Name</label>
