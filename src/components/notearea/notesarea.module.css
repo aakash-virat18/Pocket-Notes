@@ -47,7 +47,7 @@
 }
 
 .notessection {
-  @apply p-2 h-[65%] overflow-scroll flex flex-col gap-2 mb-60;
+  @apply p-2 h-[65%] overflow-auto flex flex-col gap-2 mb-60;
 }
 
 .textbox {

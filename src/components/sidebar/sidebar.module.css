@@ -1,9 +1,9 @@
 .sidebar {
-  @apply bg-white h-screen overflow-scroll xs:w-1/5 w-screen font-roboto flex flex-col relative;
+  @apply bg-white h-screen overflow-auto xs:w-1/5 w-screen font-roboto flex flex-col relative;
 }
 
 .sidebarHidden {
-  @apply bg-white h-screen overflow-scroll xs:w-1/5 w-screen font-roboto xs:flex hidden flex-col relative;
+  @apply bg-white h-screen overflow-auto xs:w-1/5 w-screen font-roboto xs:flex hidden flex-col relative;
 }
 
 .sidebar h3,
@@ -20,7 +20,7 @@
 }
 
 .groups {
-  @apply overflow-scroll mt-8 flex flex-col gap-5;
+  @apply overflow-auto mt-8 flex flex-col gap-5;
 }
 
 .groupicon {
