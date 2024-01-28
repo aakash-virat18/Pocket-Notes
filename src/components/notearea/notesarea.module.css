@@ -1,9 +1,9 @@
 .notesarea {
-  @apply h-screen bg-[#DAE5F5] xs:w-[80%] w-full;
+  @apply h-screen bg-[#DAE5F5] xs:w-[75%] w-full;
 }
 
 .upper {
-  @apply w-full h-[8%] bg-[#001F8B] flex items-center gap-2;
+  @apply w-full h-[9%] bg-[#001F8B] flex items-center gap-2;
 }
 
 .lower {
@@ -11,7 +11,7 @@
 }
 
 .textarea {
-  @apply xs:w-[77%] w-[96%] h-[85%] resize-none border-none outline-none absolute left-[1.5%] top-[7.5%] p-2 pr-8;
+  @apply xs:w-[72%] w-[96%] h-[85%] resize-none border-none outline-none absolute left-[1.5%] top-[7.5%] p-2 pr-8;
 }
 
 .send {

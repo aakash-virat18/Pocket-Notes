@@ -30,7 +30,9 @@ const SideBar = () => {
 
   return (
     <div className={`${selectedGroup ? styles.sidebarHidden : styles.sidebar}`}>
-      <h3>Pocket Notes</h3>
+      <div className={styles.headingContainer}>
+        <h3>Pocket Notes</h3>
+      </div>
       <div className={styles.groups}>
         {notes?.map((note) => {
           return <GroupIcon note={note} key={note.id} />;

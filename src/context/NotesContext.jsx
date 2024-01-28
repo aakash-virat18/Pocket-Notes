@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { months } from "../constants/constant";
 
 const NotesContext = createContext();
@@ -11,6 +11,10 @@ const Provider = ({ children }) => {
   const handleModalOpen = () => {
     setIsModalOpen((prev) => !prev);
   };
+
+  useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
 
   const handleNotesCreation = (obj) => {
     if (!notes) {
@@ -44,7 +48,6 @@ const Provider = ({ children }) => {
         return note;
       });
     });
-    localStorage.setItem("notes", JSON.stringify(notes));
   };
 
   const handleSelectedGroup = (group) => {

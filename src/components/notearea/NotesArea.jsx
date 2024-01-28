@@ -36,8 +36,6 @@ const NotesArea = () => {
     useContext(NotesContext);
   const [text, setText] = useState("");
 
-  console.log(selectedGroup);
-
   return (
     <>
       {selectedGroup ? (

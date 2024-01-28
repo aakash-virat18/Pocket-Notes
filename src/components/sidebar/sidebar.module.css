@@ -1,14 +1,26 @@
 .sidebar {
-  @apply bg-white h-screen overflow-auto xs:w-1/5 w-screen font-roboto flex flex-col relative;
+  @apply bg-white h-screen overflow-auto xs:w-1/4 w-screen font-roboto flex flex-col relative;
 }
 
 .sidebarHidden {
-  @apply bg-white h-screen overflow-auto xs:w-1/5 w-screen font-roboto xs:flex hidden flex-col relative;
+  @apply bg-white h-screen overflow-auto xs:w-1/4 w-screen font-roboto xs:flex hidden flex-col relative;
 }
+
+.headingContainer {
+  @apply h-[80px] flex items-center justify-center fixed bg-white xs:w-1/4 w-full;
+}
+
+/* height: 5pc;
+display: flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+background-color: white;
+width: 25%; */
 
 .sidebar h3,
 .sidebarHidden h3 {
-  @apply xs:text-[30px] text-[25px] font-medium text-center mt-4;
+  @apply xs:text-[30px] text-[25px] font-medium text-center;
 }
 
 .add {
@@ -16,11 +28,11 @@
 }
 
 .addButton {
-  @apply bg-[#16008B] h-14 w-14 flex items-center justify-center rounded-full absolute bottom-6 xs:right-[6%] right-5 cursor-pointer;
+  @apply bg-[#16008B] h-14 w-14 flex items-center justify-center rounded-full fixed bottom-6 xs:right-[76%] right-5 cursor-pointer;
 }
 
 .groups {
-  @apply overflow-auto mt-8 flex flex-col gap-5;
+  @apply overflow-auto pt-20 flex flex-col flex-shrink-0 flex-grow-0;
 }
 
 .groupicon {
@@ -28,7 +40,7 @@
 }
 
 .groupname {
-  @apply flex items-center gap-4 cursor-pointer hover:bg-[#EEE] h-16;
+  @apply flex items-center gap-4 cursor-pointer hover:bg-[#F1F1F1] h-16 rounded-lg;
 }
 
 .groupname p {
