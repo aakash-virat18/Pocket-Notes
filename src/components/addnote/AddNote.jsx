@@ -8,20 +8,36 @@ const AddNote = () => {
 
   const [selectedColor, setSelectedColor] = useState("");
   const [name, setName] = useState("");
+  const [error, setError] = useState({ nameError: false, colorError: false });
 
   const handleSubmit = () => {
-    if (!name || !selectedColor) {
-      return;
+    if (!name) {
+      setError((prev) => {
+        return {
+          ...prev,
+          nameError: true,
+        };
+      });
     }
-    let notesObj = {
-      groupName: name,
-      color: selectedColor,
-      notesText: [],
-      id: new Date().getTime(),
-    };
+    if (!selectedColor) {
+      setError((prev) => {
+        return {
+          ...prev,
+          colorError: true,
+        };
+      });
+    }
+    if (selectedColor && name) {
+      let notesObj = {
+        groupName: name,
+        color: selectedColor,
+        notesText: [],
+        id: new Date().getTime(),
+      };
 
-    handleNotesCreation(notesObj);
-    handleModalOpen();
+      handleNotesCreation(notesObj);
+      handleModalOpen();
+    }
   };
 
   const renderedColors = colorOptions.map((color) => {
@@ -31,7 +47,15 @@ const AddNote = () => {
         className={`xs:h-8 xs:w-8 h-6 w-6 ${color} rounded-full cursor-pointer ${
           selectedColor === color ? "border-[1.5px] border-black" : ""
         }`}
-        onClick={() => setSelectedColor(color)}
+        onClick={() => {
+          setSelectedColor(color);
+          setError((prev) => {
+            return {
+              ...prev,
+              colorError: false,
+            };
+          });
+        }}
       ></div>
     );
   });
@@ -48,13 +72,25 @@ const AddNote = () => {
             id="name"
             placeholder="Enter group name"
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => {
+              setError((prev) => {
+                return {
+                  ...prev,
+                  nameError: false,
+                };
+              });
+              setName(e.target.value);
+            }}
           />
         </div>
+        {error.nameError && (
+          <p className={styles.error}>Group name is required</p>
+        )}
         <div className={styles.colorsField}>
           <label>Choose color</label>
           <div className={styles.colors}>{renderedColors}</div>
         </div>
+        {error.colorError && <p className={styles.error}>Color is required</p>}
         <button className={styles.createButton} onClick={handleSubmit}>
           Create
         </button>

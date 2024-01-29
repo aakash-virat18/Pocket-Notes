@@ -3,7 +3,7 @@
 }
 
 .addnote {
-  @apply bg-white rounded xs:w-[740px] w-[90%] xs:h-[310px] h-[250px] xs:pl-10 pl-6 flex flex-col gap-6 relative;
+  @apply bg-white rounded xs:w-[740px] w-[90%] xs:h-[310px] h-[250px] xs:pl-10 pl-6 flex flex-col relative;
 }
 
 .addnote h4 {
@@ -11,7 +11,7 @@
 }
 
 .nameInput {
-  @apply flex xs:gap-8 gap-2;
+  @apply flex xs:gap-8 gap-2 mt-8;
 }
 
 .nameInput label,
@@ -24,7 +24,7 @@
 }
 
 .colorsField {
-  @apply flex items-center xs:gap-6 gap-2;
+  @apply flex items-center xs:gap-6 gap-2 mt-8;
 }
 
 .colors {
@@ -33,4 +33,8 @@
 
 .createButton {
   @apply bg-[#001F8B] text-white font-roboto font-normal h-8 w-32 rounded-[10px] absolute bottom-4 xs:right-6 right-1/2 sm:translate-x-0 translate-x-1/2;
+}
+
+.error {
+  @apply text-red-500 text-sm;
 }
