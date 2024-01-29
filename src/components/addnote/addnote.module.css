@@ -11,7 +11,7 @@
 }
 
 .nameInput {
-  @apply flex xs:gap-8 gap-2 mt-8;
+  @apply flex xs:gap-8 gap-2 mt-5;
 }
 
 .nameInput label,
@@ -24,7 +24,7 @@
 }
 
 .colorsField {
-  @apply flex items-center xs:gap-6 gap-2 mt-8;
+  @apply flex items-center xs:gap-6 gap-2 mt-5;
 }
 
 .colors {
