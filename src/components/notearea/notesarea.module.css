@@ -61,3 +61,11 @@
 .textbox div {
   @apply text-end mt-4 mr-4;
 }
+
+.dot {
+  @apply block h-[5px] w-[5px] rounded-full bg-black;
+}
+
+.date {
+  @apply flex flex-row-reverse gap-2 items-center;
+}

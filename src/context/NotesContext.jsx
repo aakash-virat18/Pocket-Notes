@@ -26,6 +26,14 @@ const Provider = ({ children }) => {
 
   const addNote = (text) => {
     const d = new Date();
+    const day = Number(d.getHours()) > 11 ? "PM" : "AM";
+    let hour =
+      Number(d.getHours()) > 12
+        ? Number(d.getHours()) - 12
+        : Number(d.getHours());
+    hour = hour < 10 ? "0" + hour : hour;
+    const minute =
+      Number(d.getMinutes()) < 10 ? "0" + d.getMinutes() : d.getMinutes();
     const date =
       d.getDate() +
       " " +
@@ -33,9 +41,11 @@ const Provider = ({ children }) => {
       " " +
       d.getFullYear() +
       " | " +
-      d.getHours() +
+      hour +
       ":" +
-      d.getMinutes();
+      minute +
+      " " +
+      day;
 
     setNotes((prev) => {
       return prev.map((note) => {

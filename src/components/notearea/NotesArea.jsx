@@ -26,7 +26,11 @@ const TextBox = ({ text, date }) => {
   return (
     <div className={styles.textbox}>
       <p>{text}</p>
-      <div>{date}</div>
+      <div className={styles.date}>
+        <span>{date.split("|")[1]}</span>
+        <span className={styles.dot}></span>
+        <span>{date.split("|")[0]}</span>
+      </div>
     </div>
   );
 };
@@ -59,6 +63,12 @@ const NotesArea = () => {
               placeholder="Enter text"
               onChange={(e) => setText(e.target.value)}
               value={text}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && text) {
+                  addNote(text);
+                  setText("");
+                }
+              }}
             />
             <button
               className={styles.send}
